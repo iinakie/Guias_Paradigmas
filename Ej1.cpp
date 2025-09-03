@@ -172,7 +172,7 @@ int main(){
 4. Escriba un programa que, dado un string, devuelve la cantidad de caracteres e indica
 si se trata de un palíndromo.
 */
-
+/*
 int esPalindromo(const string &str, int inicio, int fin) {
     if (inicio >= fin) {
         return 1; // Es palíndromo
@@ -182,3 +182,49 @@ int esPalindromo(const string &str, int inicio, int fin) {
     }
     return esPalindromo(str, inicio + 1, fin - 1);
 }
+
+int main(){
+    string palabra;
+    cout << "Escribi una palabra para ver si es palindromo o no: " << endl;
+    cin >> palabra;
+    esPalindromo(palabra, 0, palabra.length() - 1) 
+    ? cout << palabra << " es palindromo y tiene " << palabra.length() << " caracteres." << endl 
+    : cout << palabra << " no es palindromo y tiene " << palabra.length() << " caracteres." << endl;
+}
+*/
+
+// ####################################################################################################################################################
+
+/*
+5. Dado un array de números, escribir un programa que cuente la frecuencia de
+ocurrencia de los mismos y grafique de la forma en que se muestra en el siguiente
+ejemplo:
+a = {3, 1, 2, 3, 4, 1, 2, 3, 4, 4}
+Distribución de Frecuencia:
+1 - ** (2)
+2 - ** (2)
+3 - *** (3)
+4 - *** (3)
+*/
+/*
+void frecuenciaOcurrencia(const vector<int> &arr) {
+    map<int, int> frecuencia;
+    for (int num : arr) {
+        frecuencia[num]++;
+    }
+    cout << "Distribución de Frecuencia:\n";
+    for (const auto &par : frecuencia) {
+        cout << par.first << " - " << string(par.second, '*') << " (" << par.second << ")\n";
+    }
+}
+
+int main() {
+    vector<int> a = {3, 1, 2, 3, 4, 1, 2, 3, 4, 4, 4, 4};
+    frecuenciaOcurrencia(a);
+    return 0;
+}
+*/
+
+/*
+
+*/
